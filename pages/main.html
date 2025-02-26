@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>UCLA - NK Newspaper Search</title>
+    <link rel="stylesheet" href="../css/style.css" />
+    <script type="module" src="../js/global.js"></script>
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__left">
+        <a href="" class="logo"><img src="../images/ico_logo.svg" alt="" /></a>
+        <div class="title">NK Newspaper Search</div>
+      </div>
+      <div class="header__right">
+        <button type="button" class="btn base line ico1">Import News</button>
+        <button type="button" class="btn base line ico2"></button>
+      </div>
+    </header>
+    <main>
+      <div class="main">
+        <div class="search-terms">
+          <div class="select">
+            <button type="button">Select News</button>
+            <ul class="select__list">
+              <li>
+                <div>
+                  <input type="checkbox" class="check-type1" id="check1_All" checked="" />
+                  <label for="check1_All">전체선택</label>
+                </div>
+              </li>
+              <li>
+                <div>
+                  <input type="checkbox" class="check-type1" id="check1_1" checked="" />
+                  <label for="check1_1">로동신문</label>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="select">
+            <button type="button">Select News</button>
+            <ul class="select__list">
+              <li>
+                <div>
+                  <input type="checkbox" class="check-type1" id="check1_All" checked="" />
+                  <label for="check1_All">전체선택</label>
+                </div>
+              </li>
+              <li>
+                <div>
+                  <input type="checkbox" class="check-type1" id="check1_1" checked="" />
+                  <label for="check1_1">로동신문</label>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="search">
+            <button type="button" class="btn lg blue">OR</button>
+            <input type="text" />
+            <button type="button" class="btn lg white">Clear</button>
+          </div>
+          <button type="button" class="btn lg white line">Search</button>
+        </div>
+        <div class="search-results">
+          <div>
+            <span>Total Files</span>
+            <b>0</b>
+          </div>
+          <div>
+            <span>Matched Files</span>
+            <b>0</b>
+          </div>
+          <div>
+            <span>Matched Subjects</span>
+            <b>0</b>
+          </div>
+          <div>
+            <span>Matched Contents</span>
+            <b>0</b>
+          </div>
+          <div>
+            <span>Matched Authors</span>
+            <b>0</b>
+          </div>
+          <button type="button" class="btn base line ico3">Export checked</button>
+          <button type="button" class="btn base line ico3">Export all</button>
+        </div>
+        <div class="table-type1">
+          <div class="table-type1__thead-wrap on" aria-hidden="true">
+            <table class="table-type1__thead">
+              <colgroup>
+                <col style="width: 4rem" />
+                <col />
+                <col />
+                <col />
+                <col />
+                <col />
+                <col />
+                <col />
+                <col />
+              </colgroup>
+              <thead>
+                <tr>
+                  <th>
+                    <div class="check-wrap">
+                      <input type="checkbox" class="check-type1" id="check2_All" checked />
+                      <label for="check2_All"></label>
+                    </div>
+                  </th>
+                  <th>No.</th>
+                  <th>News Name</th>
+                  <th>Date</th>
+                  <th>Subject</th>
+                  <th>Content</th>
+                  <th>Authors</th>
+                  <th>Images</th>
+                  <th>Matched</th>
+                </tr>
+              </thead>
+            </table>
+          </div>
+          <div class="table-type1__tbody-wrap">
+            <table class="table-type1__tbody">
+              <caption></caption>
+              <thead>
+                <tr>
+                  <th>
+                    <div class="check-wrap">
+                      <input type="checkbox" class="check-type1" id="check2_All" checked />
+                      <label for="check2_All"></label>
+                    </div>
+                  </th>
+                  <th>No.</th>
+                  <th>News Name</th>
+                  <th>Date</th>
+                  <th>Subject</th>
+                  <th>Content</th>
+                  <th>Authors</th>
+                  <th>Images</th>
+                  <th>Matched</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    <div class="check-wrap">
+                      <input type="checkbox" class="check-type1" id="check2_1" checked="" />
+                      <label for="check2_1"></label>
+                    </div>
+                  </td>
+                  <td>9,999,999</td>
+                  <td>Pyongyang Sinmun</td>
+                  <td>0000년 00월 00일</td>
+                  <td>
+                    조선로동당
+                    <span class="highlighter red">중앙위원회</span>
+                    위원장 조선민주주의인민공화국 내각 수상 김일성 동지
+                  </td>
+                  <td>…로동당 중앙위원회 위원장 조선민주주의인민공화국 내각 수상 김일성 동지 조선로동당 중앙위원회 위원장 조선민주주의인민공화국 내각 수상 김일성 동지조선로동당 중앙위원회 위원장 조선민주주의인민공화국 내각 수상 김일성 동지…</td>
+                  <td>조선중앙통신, 신문주필 오윤윤</td>
+                  <td>Images</td>
+                  <td class="matched">
+                    <div><span>Subject</span><b>9,999</b></div>
+                    <div><span>Content</span><b>9,999</b></div>
+                    <div><span>Authors</span><b>0</b></div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="check-wrap">
+                      <input type="checkbox" class="check-type1" id="check2_1" checked="" />
+                      <label for="check2_1"></label>
+                    </div>
+                  </td>
+                  <td>9,999,999</td>
+                  <td>Pyongyang Sinmun</td>
+                  <td>0000년 00월 00일</td>
+                  <td>조선로동당 중앙위원회 위원장 조선민주주의인민공화국 내각 수상 김일성 동지</td>
+                  <td>…로동당 중앙위원회 위원장 조선민주주의인민공화국 내각 수상 김일성 동지 조선로동당 중앙위원회 위원장 조선민주주의인민공화국 내각 수상 김일성 동지조선로동당 중앙위원회 위원장 조선민주주의인민공화국 내각 수상 김일성 동지…</td>
+                  <td>조선중앙통신, 신문주필 오윤윤</td>
+                  <td>Images</td>
+                  <td class="matched">
+                    <div><span>Subject</span><b>9,999</b></div>
+                    <div><span>Content</span><b>9,999</b></div>
+                    <div><span>Authors</span><b>0</b></div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="check-wrap">
+                      <input type="checkbox" class="check-type1" id="check2_1" checked="" />
+                      <label for="check2_1"></label>
+                    </div>
+                  </td>
+                  <td>9,999,999</td>
+                  <td>Pyongyang Sinmun</td>
+                  <td>0000년 00월 00일</td>
+                  <td>조선로동당 중앙위원회 위원장 조선민주주의인민공화국 내각 수상 김일성 동지</td>
+                  <td>…로동당 중앙위원회 위원장 조선민주주의인민공화국 내각 수상 김일성 동지 조선로동당 중앙위원회 위원장 조선민주주의인민공화국 내각 수상 김일성 동지조선로동당 중앙위원회 위원장 조선민주주의인민공화국 내각 수상 김일성 동지…</td>
+                  <td>조선중앙통신, 신문주필 오윤윤</td>
+                  <td>Images</td>
+                  <td class="matched">
+                    <div><span>Subject</span><b>9,999</b></div>
+                    <div><span>Content</span><b>9,999</b></div>
+                    <div><span>Authors</span><b>0</b></div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="check-wrap">
+                      <input type="checkbox" class="check-type1" id="check2_1" checked="" />
+                      <label for="check2_1"></label>
+                    </div>
+                  </td>
+                  <td>9,999,999</td>
+                  <td>Pyongyang Sinmun</td>
+                  <td>0000년 00월 00일</td>
+                  <td>조선로동당 중앙위원회 위원장 조선민주주의인민공화국 내각 수상 김일성 동지</td>
+                  <td>…로동당 중앙위원회 위원장 조선민주주의인민공화국 내각 수상 김일성 동지 조선로동당 중앙위원회 위원장 조선민주주의인민공화국 내각 수상 김일성 동지조선로동당 중앙위원회 위원장 조선민주주의인민공화국 내각 수상 김일성 동지…</td>
+                  <td>조선중앙통신, 신문주필 오윤윤</td>
+                  <td>Images</td>
+                  <td class="matched">
+                    <div><span>Subject</span><b>9,999</b></div>
+                    <div><span>Content</span><b>9,999</b></div>
+                    <div><span>Authors</span><b>0</b></div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="check-wrap">
+                      <input type="checkbox" class="check-type1" id="check2_1" checked="" />
+                      <label for="check2_1"></label>
+                    </div>
+                  </td>
+                  <td>9,999,999</td>
+                  <td>Pyongyang Sinmun</td>
+                  <td>0000년 00월 00일</td>
+                  <td>조선로동당 중앙위원회 위원장 조선민주주의인민공화국 내각 수상 김일성 동지</td>
+                  <td>…로동당 중앙위원회 위원장 조선민주주의인민공화국 내각 수상 김일성 동지 조선로동당 중앙위원회 위원장 조선민주주의인민공화국 내각 수상 김일성 동지조선로동당 중앙위원회 위원장 조선민주주의인민공화국 내각 수상 김일성 동지…</td>
+                  <td>조선중앙통신, 신문주필 오윤윤</td>
+                  <td>Images</td>
+                  <td class="matched">
+                    <div><span>Subject</span><b>9,999</b></div>
+                    <div><span>Content</span><b>9,999</b></div>
+                    <div><span>Authors</span><b>0</b></div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="check-wrap">
+                      <input type="checkbox" class="check-type1" id="check2_1" checked="" />
+                      <label for="check2_1"></label>
+                    </div>
+                  </td>
+                  <td>9,999,999</td>
+                  <td>Pyongyang Sinmun</td>
+                  <td>0000년 00월 00일</td>
+                  <td>조선로동당 중앙위원회 위원장 조선민주주의인민공화국 내각 수상 김일성 동지</td>
+                  <td>…로동당 중앙위원회 위원장 조선민주주의인민공화국 내각 수상 김일성 동지 조선로동당 중앙위원회 위원장 조선민주주의인민공화국 내각 수상 김일성 동지조선로동당 중앙위원회 위원장 조선민주주의인민공화국 내각 수상 김일성 동지…</td>
+                  <td>조선중앙통신, 신문주필 오윤윤</td>
+                  <td>Images</td>
+                  <td class="matched">
+                    <div><span>Subject</span><b>9,999</b></div>
+                    <div><span>Content</span><b>9,999</b></div>
+                    <div><span>Authors</span><b>0</b></div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="check-wrap">
+                      <input type="checkbox" class="check-type1" id="check2_1" checked="" />
+                      <label for="check2_1"></label>
+                    </div>
+                  </td>
+                  <td>9,999,999</td>
+                  <td>Pyongyang Sinmun</td>
+                  <td>0000년 00월 00일</td>
+                  <td>조선로동당 중앙위원회 위원장 조선민주주의인민공화국 내각 수상 김일성 동지</td>
+                  <td>…로동당 중앙위원회 위원장 조선민주주의인민공화국 내각 수상 김일성 동지 조선로동당 중앙위원회 위원장 조선민주주의인민공화국 내각 수상 김일성 동지조선로동당 중앙위원회 위원장 조선민주주의인민공화국 내각 수상 김일성 동지…</td>
+                  <td>조선중앙통신, 신문주필 오윤윤</td>
+                  <td>Images</td>
+                  <td class="matched">
+                    <div><span>Subject</span><b>9,999</b></div>
+                    <div><span>Content</span><b>9,999</b></div>
+                    <div><span>Authors</span><b>0</b></div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="check-wrap">
+                      <input type="checkbox" class="check-type1" id="check2_1" checked="" />
+                      <label for="check2_1"></label>
+                    </div>
+                  </td>
+                  <td>9,999,999</td>
+                  <td>Pyongyang Sinmun</td>
+                  <td>0000년 00월 00일</td>
+                  <td>조선로동당 중앙위원회 위원장 조선민주주의인민공화국 내각 수상 김일성 동지</td>
+                  <td>…로동당 중앙위원회 위원장 조선민주주의인민공화국 내각 수상 김일성 동지 조선로동당 중앙위원회 위원장 조선민주주의인민공화국 내각 수상 김일성 동지조선로동당 중앙위원회 위원장 조선민주주의인민공화국 내각 수상 김일성 동지…</td>
+                  <td>조선중앙통신, 신문주필 오윤윤</td>
+                  <td>Images</td>
+                  <td class="matched">
+                    <div><span>Subject</span><b>9,999</b></div>
+                    <div><span>Content</span><b>9,999</b></div>
+                    <div><span>Authors</span><b>0</b></div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="check-wrap">
+                      <input type="checkbox" class="check-type1" id="check2_1" checked="" />
+                      <label for="check2_1"></label>
+                    </div>
+                  </td>
+                  <td>9,999,999</td>
+                  <td>Pyongyang Sinmun</td>
+                  <td>0000년 00월 00일</td>
+                  <td>조선로동당 중앙위원회 위원장 조선민주주의인민공화국 내각 수상 김일성 동지</td>
+                  <td>…로동당 중앙위원회 위원장 조선민주주의인민공화국 내각 수상 김일성 동지 조선로동당 중앙위원회 위원장 조선민주주의인민공화국 내각 수상 김일성 동지조선로동당 중앙위원회 위원장 조선민주주의인민공화국 내각 수상 김일성 동지…</td>
+                  <td>조선중앙통신, 신문주필 오윤윤</td>
+                  <td>Images</td>
+                  <td class="matched">
+                    <div><span>Subject</span><b>9,999</b></div>
+                    <div><span>Content</span><b>9,999</b></div>
+                    <div><span>Authors</span><b>0</b></div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="check-wrap">
+                      <input type="checkbox" class="check-type1" id="check2_1" checked="" />
+                      <label for="check2_1"></label>
+                    </div>
+                  </td>
+                  <td>9,999,999</td>
+                  <td>Pyongyang Sinmun</td>
+                  <td>0000년 00월 00일</td>
+                  <td>조선로동당 중앙위원회 위원장 조선민주주의인민공화국 내각 수상 김일성 동지</td>
+                  <td>…로동당 중앙위원회 위원장 조선민주주의인민공화국 내각 수상 김일성 동지 조선로동당 중앙위원회 위원장 조선민주주의인민공화국 내각 수상 김일성 동지조선로동당 중앙위원회 위원장 조선민주주의인민공화국 내각 수상 김일성 동지…</td>
+                  <td>조선중앙통신, 신문주필 오윤윤</td>
+                  <td>Images</td>
+                  <td class="matched">
+                    <div><span>Subject</span><b>9,999</b></div>
+                    <div><span>Content</span><b>9,999</b></div>
+                    <div><span>Authors</span><b>0</b></div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="check-wrap">
+                      <input type="checkbox" class="check-type1" id="check2_1" checked="" />
+                      <label for="check2_1"></label>
+                    </div>
+                  </td>
+                  <td>9,999,999</td>
+                  <td>Pyongyang Sinmun</td>
+                  <td>0000년 00월 00일</td>
+                  <td>조선로동당 중앙위원회 위원장 조선민주주의인민공화국 내각 수상 김일성 동지</td>
+                  <td>…로동당 중앙위원회 위원장 조선민주주의인민공화국 내각 수상 김일성 동지 조선로동당 중앙위원회 위원장 조선민주주의인민공화국 내각 수상 김일성 동지조선로동당 중앙위원회 위원장 조선민주주의인민공화국 내각 수상 김일성 동지…</td>
+                  <td>조선중앙통신, 신문주필 오윤윤</td>
+                  <td>Images</td>
+                  <td class="matched">
+                    <div><span>Subject</span><b>9,999</b></div>
+                    <div><span>Content</span><b>9,999</b></div>
+                    <div><span>Authors</span><b>0</b></div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="check-wrap">
+                      <input type="checkbox" class="check-type1" id="check2_1" checked="" />
+                      <label for="check2_1"></label>
+                    </div>
+                  </td>
+                  <td>9,999,999</td>
+                  <td>Pyongyang Sinmun</td>
+                  <td>0000년 00월 00일</td>
+                  <td>조선로동당 중앙위원회 위원장 조선민주주의인민공화국 내각 수상 김일성 동지</td>
+                  <td>…로동당 중앙위원회 위원장 조선민주주의인민공화국 내각 수상 김일성 동지 조선로동당 중앙위원회 위원장 조선민주주의인민공화국 내각 수상 김일성 동지조선로동당 중앙위원회 위원장 조선민주주의인민공화국 내각 수상 김일성 동지…</td>
+                  <td>조선중앙통신, 신문주필 오윤윤</td>
+                  <td>Images</td>
+                  <td class="matched">
+                    <div><span>Subject</span><b>9,999</b></div>
+                    <div><span>Content</span><b>9,999</b></div>
+                    <div><span>Authors</span><b>0</b></div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <div class="table-type1__empty">검색된 내용이 없습니다.</div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

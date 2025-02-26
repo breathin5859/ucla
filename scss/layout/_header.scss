@@ -1,0 +1,29 @@
+@use "../abstracts/" as *;
+
+@layer Layout.Header {
+  .header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: rem(28) rem(40);
+    &__left {
+      display: flex;
+      align-items: center;
+      gap: rem(16);
+      .logo {
+        width: rem(120);
+        height: 100%;
+      }
+      .title {
+        font-size: rem(32);
+        font-weight: 900;
+        color: $ft-color;
+      }
+    }
+    &__right {
+      display: grid;
+      grid-template-columns: max-content rem(56);
+      gap: rem(8);
+    }
+  }
+}

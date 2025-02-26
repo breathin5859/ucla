@@ -1,0 +1,35 @@
+@use "../abstracts/" as *;
+
+@layer Components.Search {
+  .search-results {
+    display: grid;
+    grid-template-columns: repeat(5, 15.17%) repeat(2, 10.76%);
+    gap: rem(8);
+    padding: rem(8) rem(40);
+
+    > div {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: rem(11) rem(32);
+      border: rem(1) solid $border-color;
+      border-radius: rem(8);
+      font-size: rem(15);
+      line-height: rem(17.9);
+      box-sizing: border-box;
+      b {
+        color: $ft-color;
+      }
+    }
+    > button {
+      height: 100%;
+    }
+  }
+
+  .search-terms {
+    display: grid;
+    grid-template-columns: 26% 17% 1fr 10%;
+    gap: rem(16);
+    padding: rem(8) rem(40);
+  }
+}

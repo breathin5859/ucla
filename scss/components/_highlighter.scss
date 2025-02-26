@@ -1,0 +1,9 @@
+@use "../abstracts/" as *;
+
+@layer Components.Highlighter {
+  .highlighter {
+    &.red {
+      background-color: red;
+    }
+  }
+}

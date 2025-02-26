@@ -1,0 +1,129 @@
+@use "../abstracts/" as *;
+
+@layer Components.Table {
+  caption {
+    @include a11y-hidden;
+  }
+
+  // thead,tbody wrap
+  %tableStyle {
+    > * {
+      > * {
+        background-color: $white;
+
+        > * {
+          position: relative;
+          padding: rem(12);
+          font-size: rem(14);
+
+          &:first-child {
+            border-radius: rem(8) 0 0 rem(8);
+          }
+
+          &:last-child {
+            border-radius: 0 rem(8) rem(8) 0;
+          }
+
+          &::before {
+            content: "";
+            @include position(a, left, 0, top, 50%);
+            display: block;
+            background-color: $border-color;
+          }
+        }
+      }
+    }
+  }
+
+  .table-type1 {
+    padding: rem(12) rem(40);
+    background-color: #f7fbff;
+    background-color: red;
+    height: 100%;
+    box-sizing: border-box;
+
+    &__thead-wrap {
+      &.on {
+        margin-right: rem(6);
+      }
+    }
+    &__thead {
+      @extend %tableStyle;
+      thead {
+        th {
+          &:nth-child(2) ~ th {
+            &::before {
+              width: rem(1);
+              height: rem(19);
+            }
+          }
+        }
+      }
+    }
+
+    &__tbody-wrap {
+      overflow: auto;
+      position: relative;
+      height: calc(100% - rem(51));
+      margin-top: rem(8);
+      @include scroll(6, 4, $scroll);
+    }
+    &__tbody {
+      @extend %tableStyle;
+      border-collapse: separate;
+      border-spacing: 0 rem(4);
+
+      caption,
+      thead {
+        @include a11y-hidden;
+        border-spacing: inherit;
+        height: 0;
+        margin: 0;
+        padding: 0;
+      }
+
+      tbody {
+        td {
+          align-content: start;
+          font-weight: 500;
+
+          &:nth-child(2) ~ td {
+            &::before {
+              width: rem(1);
+              height: calc(100% - rem(24));
+            }
+          }
+
+          &.matched {
+            > div {
+              display: flex;
+              align-items: center;
+              justify-content: space-between;
+            }
+            span {
+              color: $gray77;
+              font-size: rem(13);
+            }
+            b {
+              font-weight: 500;
+            }
+          }
+        }
+      }
+    }
+    &__empty {
+      @include position(a, left, 50%, top, 50%);
+      display: none;
+      color: $placehodler;
+      font-size: rem(20);
+      font-weight: 500;
+      &.on {
+        display: block;
+      }
+    }
+
+    .main & {
+      height: calc(100% - rem(123.91));
+    }
+  }
+}

@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- css -->
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/guide.css" />
+    <!-- js -->
+    <script type="module" src="../js/global.js"></script>
+    <title>UCLS - Style</title>
+  </head>
+  <body>
+    <!-- header -->
+    <header class="header">
+      <div class="header__left">
+        <a href="" class="logo"><img src="../images/ico_logo.svg" alt="" /></a>
+        <div class="title">NK Newspaper Search</div>
+      </div>
+      <div class="header__right">
+        <button type="button" class="btn base line ico1">Import News</button>
+        <button type="button" class="btn base line ico2"></button>
+      </div>
+    </header>
+    <!-- button -->
+    <details name="guide">
+      <summary>Button</summary>
+      <div>
+        <h2>크기</h2>
+        <button type="button" class="btn base">.base</button>
+        <button type="button" class="btn lg">.lg</button>
+
+        <h2>색상</h2>
+        <button type="button" class="btn base line">.btn.line</button>
+        <button type="button" class="btn base blue">.btn</button>
+
+        <h2>아이콘</h2>
+        <button type="button" class="btn ico1"></button>
+        <button type="button" class="btn ico2"></button>
+        <button type="button" class="btn ico3"></button>
+      </div>
+    </details>
+    <!-- form -->
+    <details name="guide">
+      <summary>From</summary>
+      <div>
+        <h2>폼공통</h2>
+        input
+        <input type="text" class="input" />
+        placeholder
+        <input type="text" class="input" placeholder="placeholder" />
+
+        <h2>체크박스</h2>
+        <div class="check-wrap">
+          <input type="checkbox" class="check-type1" id="check1_1" checked />
+          <label for="check1_1">text</label>
+          <input type="checkbox" class="check-type1" id="check1_2" />
+          <label for="check1_2"></label>
+        </div>
+
+        <h2>검색박스</h2>
+        <div class="search">
+          <button type="button" class="btn lg blue">OR</button>
+          <input type="text" />
+          <button type="button" class="btn lg white">Clear</button>
+        </div>
+
+        <h2>디자인 selectbox</h2>
+        <div class="select --active">
+          <button type="button">Select News</button>
+          <ul class="select__list">
+            <li>
+              <div>
+                <input type="checkbox" class="check-type1" id="check1_All" checked />
+                <label for="check1_All">전체선택</label>
+              </div>
+            </li>
+            <li>
+              <div>
+                <input type="checkbox" class="check-type1" id="check1_1" checked />
+                <label for="check1_1">로동신문</label>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </details>
+    <!-- table -->
+    <details name="guide" open>
+      <summary>Table</summary>
+      <div>
+        <h2>table-type1</h2>
+        <div class="table-type1">
+          <div class="table-type1__thead-wrap on" aria-hidden="true">
+            <table class="table-type1__thead">
+              <colgroup>
+                <col style="width: 4rem" />
+                <col />
+                <col />
+                <col />
+                <col />
+                <col />
+                <col />
+                <col />
+                <col />
+              </colgroup>
+              <thead>
+                <tr>
+                  <th>
+                    <div class="check-wrap">
+                      <input type="checkbox" class="check-type1" id="check2_All" checked />
+                      <label for="check2_All"></label>
+                    </div>
+                  </th>
+                  <th>No.</th>
+                  <th>News Name</th>
+                  <th>Date</th>
+                  <th>Subject</th>
+                  <th>Content</th>
+                  <th>Authors</th>
+                  <th>Images</th>
+                  <th>Matched</th>
+                </tr>
+              </thead>
+            </table>
+          </div>
+          <div class="table-type1__tbody-wrap">
+            <table class="table-type1__tbody">
+              <caption></caption>
+              <thead>
+                <tr>
+                  <th>
+                    <div class="check-wrap">
+                      <input type="checkbox" class="check-type1" id="check2_All" checked />
+                      <label for="check2_All"></label>
+                    </div>
+                  </th>
+                  <th>No.</th>
+                  <th>News Name</th>
+                  <th>Date</th>
+                  <th>Subject</th>
+                  <th>Content</th>
+                  <th>Authors</th>
+                  <th>Images</th>
+                  <th>Matched</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    <div class="check-wrap">
+                      <input type="checkbox" class="check-type1" id="check2_1" checked="" />
+                      <label for="check2_1"></label>
+                    </div>
+                  </td>
+                  <td>9,999,999</td>
+                  <td>Pyongyang Sinmun</td>
+                  <td>0000년 00월 00일</td>
+                  <td>
+                    조선로동당
+                    <span class="highlighter red">중앙위원회</span>
+                    위원장 조선민주주의인민공화국 내각 수상 김일성 동지
+                  </td>
+                  <td>…로동당 중앙위원회 위원장 조선민주주의인민공화국 내각 수상 김일성 동지 조선로동당 중앙위원회 위원장 조선민주주의인민공화국 내각 수상 김일성 동지조선로동당 중앙위원회 위원장 조선민주주의인민공화국 내각 수상 김일성 동지…</td>
+                  <td>조선중앙통신, 신문주필 오윤윤</td>
+                  <td>Images</td>
+                  <td class="matched">
+                    <div><span>Subject</span><b>9,999</b></div>
+                    <div><span>Content</span><b>9,999</b></div>
+                    <div><span>Authors</span><b>0</b></div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="check-wrap">
+                      <input type="checkbox" class="check-type1" id="check2_1" checked="" />
+                      <label for="check2_1"></label>
+                    </div>
+                  </td>
+                  <td>9,999,999</td>
+                  <td>Pyongyang Sinmun</td>
+                  <td>0000년 00월 00일</td>
+                  <td>조선로동당 중앙위원회 위원장 조선민주주의인민공화국 내각 수상 김일성 동지</td>
+                  <td>…로동당 중앙위원회 위원장 조선민주주의인민공화국 내각 수상 김일성 동지 조선로동당 중앙위원회 위원장 조선민주주의인민공화국 내각 수상 김일성 동지조선로동당 중앙위원회 위원장 조선민주주의인민공화국 내각 수상 김일성 동지…</td>
+                  <td>조선중앙통신, 신문주필 오윤윤</td>
+                  <td>Images</td>
+                  <td class="matched">
+                    <div><span>Subject</span><b>9,999</b></div>
+                    <div><span>Content</span><b>9,999</b></div>
+                    <div><span>Authors</span><b>0</b></div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <div class="table-type1__empty">검색된 내용이 없습니다.</div>
+          </div>
+        </div>
+      </div>
+    </details>
+    <!-- Etc. -->
+    <details name="guide">
+      <summary>Etc.</summary>
+      <div>
+        <h2>검색결과</h2>
+        <div class="search-results">
+          <div>
+            <span>Total Files</span>
+            <b>0</b>
+          </div>
+          <div>
+            <span>Matched Files</span>
+            <b>0</b>
+          </div>
+          <div>
+            <span>Matched Subjects</span>
+            <b>0</b>
+          </div>
+          <div>
+            <span>Matched Contents</span>
+            <b>0</b>
+          </div>
+          <div>
+            <span>Matched Authors</span>
+            <b>0</b>
+          </div>
+          <button type="button" class="btn base line ico3">Export checked</button>
+          <button type="button" class="btn base line ico3">Export all</button>
+        </div>
+      </div>
+    </details>
+  </body>
+  <style></style>
+</html>

@@ -1,0 +1,7 @@
+@use "../abstracts/" as *;
+
+@layer Components.Bar {
+  .bar-type1 {
+    @include bar(line, 1, 19, $border-color, gap(2));
+  }
+}

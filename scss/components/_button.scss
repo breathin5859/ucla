@@ -1,0 +1,103 @@
+@use "sass:list";
+@use "../abstracts/" as *;
+
+// 버튼 사이즈 정의
+$buttonSize: (
+  1: (
+    "className": base,
+    "height": 40,
+    "fontSize": 16,
+    "paddingInline": 8,
+    "borderWidth": 1,
+    "fontWeight": 600,
+  ),
+  2: (
+    "className": lg,
+    "height": 48,
+    "fontSize": 16,
+    "paddingInline": 8,
+    "borderWidth": 1,
+    "fontWeight": 600,
+  ),
+);
+
+// 버튼 색상 정의
+$buttonColor: (
+  1: (
+    "className": ".white",
+    "bgColor": $white,
+    "color": $ft-color,
+    "borderColor": $white,
+  ),
+  2: (
+    "className": ".line",
+    "bgColor": #ffff,
+    "color": $ft-color,
+    "borderColor": $border-color,
+  ),
+  3: (
+    "className": ".blue",
+    "bgColor": $ft-color,
+    "color": $white,
+    "borderColor": $ft-color,
+  ),
+);
+
+// 버튼 아이콘 정의
+$buttonIcon: (
+  1: (
+    "className": ".ico1",
+    "direction": before,
+    "imgName": "ico_upload.svg",
+    "width": 24,
+    "height": 24,
+  ),
+  2: (
+    "className": ".ico2",
+    "direction": before,
+    "imgName": "ico_language.svg",
+    "width": 24,
+    "height": 24,
+  ),
+  3: (
+    "className": ".ico3",
+    "direction": before,
+    "imgName": "ico_download.svg",
+    "width": 24,
+    "height": 24,
+  ),
+);
+
+//사이즈
+@layer Components.Button {
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: rem(4);
+    box-sizing: border-box;
+    border-radius: rem(8);
+    letter-spacing: rem(-0.5);
+    &.fullsize {
+      width: 100%;
+    }
+
+    @for $idx from 1 through list.length($buttonSize) {
+      @include buttonSize($buttonSize, $idx);
+    }
+    @for $index from 1 through list.length($buttonColor) {
+      @include buttonColor($buttonColor, $index);
+    }
+    @for $index from 1 through list.length($buttonIcon) {
+      @include buttonIcon($buttonIcon, $index);
+    }
+  }
+}
+
+@layer Components.Button2 {
+  button {
+    &:active {
+      filter: brightness(0.8);
+    }
+  }
+}

@@ -1,0 +1,186 @@
+@use "../abstracts/" as *;
+@use "sass:list";
+@use "sass:map";
+
+// 폼요소 공통디자인 정의
+$formSettings: (
+  "height": rem(48),
+  "border": rem(1) solid $border-color,
+  "borderRadius": rem(8),
+  "bgColor": $white,
+  "paddingInline": rem(16),
+  "fontColor": $black,
+  "fontSize": rem(16),
+  "fontWeight": 600,
+  "lineHeight": 1,
+  "letterSpacing": rem(-0.5),
+  "placehodlerColor": $placehodler,
+);
+
+// 라디오 & 체크박스 디자인 정의
+$radioCheckSetting: (
+  1: (
+    "className": ".check-type1",
+    "offImage": "ico_check_off.svg",
+    "onImage": "ico_check_on.svg",
+    "width": rem(16),
+    "height": rem(16),
+    "checkFontColor": $ft-color,
+  ),
+);
+
+// Select디자인 정의
+$selectSetting: (
+  "bgUrl": "bg_select.svg",
+  "iconPosition": rem(12),
+  "icoWidth": 12,
+  "icoHdeight": 6,
+  "paddingInline": 16,
+);
+$selectListSetting: (
+  "borderColor": $border-color,
+  "borderRadius": 8,
+  "bgColor": $white,
+  "hoverColor": $hover,
+);
+
+%selectList {
+  border: rem(1) solid map.get($selectListSetting, borderColor);
+  border-radius: rem(map.get($selectListSetting, borderRadius));
+  background-color: map.get($selectListSetting, bgColor);
+  > * {
+    &:hover {
+      background-color: map.get($selectListSetting, hoverColor);
+    }
+  }
+}
+
+%form {
+  height: map.get($formSettings, height);
+  border: map.get($formSettings, border);
+  box-sizing: border-box;
+  border-radius: map.get($formSettings, borderRadius);
+  background-color: map.get($formSettings, bgColor);
+  padding-inline: map.get($formSettings, paddingInline);
+  color: map.get($formSettings, fontColor);
+  font-size: map.get($formSettings, fontSize);
+  font-weight: map.get($formSettings, fontWeight);
+  line-height: map.get($formSettings, lineHeight);
+  letter-spacing: map.get($formSettings, letterSpacing);
+  &::placeholder {
+    color: map.get($formSettings, placehodlerColor);
+  }
+  &:disabled {
+    background: map.get($formSettings, disabledBgColor);
+  }
+  &[readonly] {
+    background: map.get($formSettings, readonlyBgColor);
+  }
+  .select & {
+    color: $placehodler;
+  }
+}
+
+%label {
+  display: inline-flex;
+  gap: rem(12);
+  align-items: center;
+  font-size: rem(16);
+  font-weight: 500;
+  .select__list & {
+    display: flex;
+    padding: rem(10.5) rem(12);
+  }
+}
+
+@layer Components.Form {
+  .input {
+    @extend %form;
+    width: var(--w, 100%);
+  }
+
+  .select {
+    position: relative;
+
+    &.--active {
+      .select__list {
+        display: block;
+      }
+    }
+
+    > button {
+      @extend %form;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: var(--w, 100%);
+      &:after {
+        content: "";
+        @include background(map.get($selectSetting, bgUrl));
+        width: rem(map.get($selectSetting, icoWidth));
+        height: rem(map.get($selectSetting, icoHdeight));
+      }
+    }
+    &__list {
+      @extend %selectList;
+      display: none;
+      overflow: hidden;
+      position: absolute;
+      inset: rem(52) 0 auto 0;
+
+      > * {
+        color: $black;
+      }
+    }
+  }
+
+  .textarea {
+    @extend %form;
+    padding-block: rem(15);
+    width: 100%;
+    height: rem(var(--height, 10));
+    &::placeholder {
+      color: #000;
+      font-family: "Noto Sans KR";
+      font-size: rem(12);
+      line-height: rem(12);
+      letter-spacing: rem(-0.5);
+    }
+  }
+  .search {
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: rem(64) 1fr rem(80);
+    align-self: center;
+    border: rem(1) solid $border-color;
+    border-radius: rem(8);
+    > button {
+      border-radius: 0;
+      &:is(:not(.blue)) {
+        font-weight: 500;
+      }
+    }
+
+    input {
+      border: none;
+      border-left: rem(1) solid $border-color;
+      padding-inline: rem(16);
+      &:focus {
+        outline: none;
+      }
+    }
+  }
+
+  .check-wrap {
+    display: flex;
+    align-items: center;
+    .table-type1 & {
+      justify-content: center;
+      height: rem(19);
+    }
+  }
+
+  @for $idx from 1 through list.length($radioCheckSetting) {
+    @include RadioCheckbox($radioCheckSetting, $idx);
+  }
+}
